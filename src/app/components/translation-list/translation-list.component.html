@@ -1,0 +1,40 @@
+<div class="search-container">
+  <mat-form-field class="search-field">
+      <input matInput placeholder="Search" [(ngModel)]="searchText" (input)="searchTranslations()">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="searchTranslations()">Search</button>
+</div>
+
+<div class="translations-container">
+  <table class="translations-table">
+      <thead>
+          <tr>
+              <th>Text</th>
+              <th>English</th>
+              <th>Hindi</th>
+              <th>Tamil</th>
+              <th>Telgu</th>
+              <th>Kannada</th>
+
+              <th>Last Updated</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let translation of translations">
+              <td class="multiline-text">{{ translation.text }}</td>
+              <td>{{ translation.translations.English }}</td>
+              <td>{{ translation.translations.Hindi }}</td>
+              <td>{{ translation.translations.Tamil }}</td>
+              <td>{{ translation.translations.Telgu }}</td>
+              <td>{{ translation.translations.Kannada }}</td>
+
+              <td>{{ translation.lastUpdated }}</td>
+              <td>
+                  <button mat-raised-button color="green" (click)="editTranslation(translation.id)">Edit</button>
+                  <button mat-raised-button color="red" (click)="deleteTranslation(translation.id)">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>

@@ -1,0 +1,35 @@
+<h2>Edit Translation</h2>
+<div>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>English Translation</mat-label>
+    <input matInput placeholder="English Translation" [(ngModel)]="translation.translations.English">
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Hindi Translation</mat-label>
+    <input matInput placeholder="Hindi Translation" [(ngModel)]="translation.translations.Hindi">
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Tamil Translation</mat-label>
+    <input matInput placeholder="Tamil Translation" [(ngModel)]="translation.translations.Tamil">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Telgu Translation</mat-label>
+    <input matInput placeholder="Telgu Translation" [(ngModel)]="translation.translations.Telgu">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Kannada Translation</mat-label>
+    <input matInput placeholder="Kannada Translation" [(ngModel)]="translation.translations.Kannada">
+  </mat-form-field>
+</div>
+
+<button mat-button color="primary" (click)="updateTranslation()">Update</button>
